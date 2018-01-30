@@ -54,9 +54,14 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(quantity);
-        displayPrice(quantity * pricePerCoffee);
-        Toast.makeText(this, "Thank you for ordering!", Toast.LENGTH_SHORT).show();
+        if (quantity > 0){
+            display(quantity);
+            displayPrice(quantity * pricePerCoffee);
+            displayOrderReview();
+        } else {
+            Toast.makeText(this, "ERROR: Cannot make an order less than 0", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     /**
@@ -75,5 +80,25 @@ public class MainActivity extends AppCompatActivity {
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
+
+    /**
+     * This method displays the order made.
+     */
+    private void displayOrderReview() {
+        String thankYouMessage = "Thank you for ordering.";
+        String singleCoffeeMessage = quantity + " java coffee on the way!";
+        String multipleCoffeeMessage = quantity + " java coffees on the way!";
+
+        TextView thankYou = (TextView) findViewById(R.id.thankYouOrder_text_view);
+        TextView orderReview = (TextView) findViewById(R.id.orderReview_text_view);
+
+        if (quantity == 1){
+            thankYou.setText(thankYouMessage);
+            orderReview.setText(singleCoffeeMessage);
+        } else if (quantity > 1) {
+            thankYou.setText(thankYouMessage);
+            orderReview.setText(multipleCoffeeMessage);
+        }
+    }
 
 }
