@@ -2,7 +2,9 @@ package com.loryleen.justjava;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -19,14 +21,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method increments the quantity when "+" button is clicked.
+     */
+    public void increment(View view){
+        int quantity = 3;
+        display(quantity);
+    }
+
+    /**
+     * This method decrements the quantity when "-" button is clicked.
+     */
+    public void decrement(View view){
+        int quantity = 1;
+        display(quantity);
+    }
+
+    /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int numberOfCoffees = 2;
+        int quantity = 5;
         int pricePerCoffee = 5;
 
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * pricePerCoffee);
+        display(quantity);
+        displayPrice(quantity * pricePerCoffee);
     }
 
     /**
@@ -44,4 +62,6 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+
+
 }
