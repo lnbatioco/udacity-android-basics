@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 
@@ -21,30 +22,41 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Declare global variables to be referenced by other methods
+     */
+    int quantity = 0;
+    int pricePerCoffee = 5;
+
+
+    /**
      * This method increments the quantity when "+" button is clicked.
      */
     public void increment(View view){
-        int quantity = 3;
+        quantity++;
         display(quantity);
+        displayPrice(quantity * pricePerCoffee);
     }
 
     /**
      * This method decrements the quantity when "-" button is clicked.
      */
     public void decrement(View view){
-        int quantity = 1;
-        display(quantity);
+        if (quantity == 0){
+            Toast.makeText(this, "ERROR: Cannot make an order less than 0", Toast.LENGTH_SHORT).show();
+        } else {
+            quantity--;
+            display(quantity);
+            displayPrice(quantity * pricePerCoffee);
+        }
     }
 
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity = 5;
-        int pricePerCoffee = 5;
-
         display(quantity);
         displayPrice(quantity * pricePerCoffee);
+        Toast.makeText(this, "Thank you for ordering!", Toast.LENGTH_SHORT).show();
     }
 
     /**
