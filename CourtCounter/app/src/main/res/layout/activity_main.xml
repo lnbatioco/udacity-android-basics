@@ -24,7 +24,7 @@
             />
 
         <TextView
-            android:id="@+id/teamA_points"
+            android:id="@+id/teamA_score"
             android:text="0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,30 +33,30 @@
             />
 
         <Button
-            android:id="@+id/three_pointer"
+            android:id="@+id/three_pointer_teamA"
             android:text="+3 points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="threePointer"
+            android:onClick="threePointerTeamA"
             />
 
         <Button
-            android:id="@+id/two_pointer"
+            android:id="@+id/two_pointer_teamA"
             android:text="+2 points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="twoPointer"
+            android:onClick="twoPointerTeamA"
             />
 
         <Button
-            android:id="@+id/free_throw"
+            android:id="@+id/free_throw_teamA"
             android:text="Free Throw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="freeThrow"
+            android:onClick="freeThrowTeamA"
             />
     </LinearLayout>
     <!--END TeamA-->
@@ -78,7 +78,7 @@
             />
 
         <TextView
-            android:id="@+id/teamB_points"
+            android:id="@+id/teamB_score"
             android:text="0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,30 +87,30 @@
             />
 
         <Button
-            android:id="@+id/three_pointer"
+            android:id="@+id/three_pointer_teamB"
             android:text="+3 points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="threePointer"
+            android:onClick="threePointerTeamB"
             />
 
         <Button
-            android:id="@+id/two_pointer"
+            android:id="@+id/two_pointer_teamB"
             android:text="+2 points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="twoPointer"
+            android:onClick="twoPointerTeamB"
             />
 
         <Button
-            android:id="@+id/free_throw"
+            android:id="@+id/free_throw_teamB"
             android:text="Free Throw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="freeThrow"
+            android:onClick="freeThrowTeamB"
             />
     </LinearLayout>
 
