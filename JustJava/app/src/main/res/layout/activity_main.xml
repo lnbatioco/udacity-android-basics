@@ -91,22 +91,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_marginLeft="16dp"
         android:gravity="center">
 
         <TextView
-            android:id="@+id/thankYouOrder_text_view"
+            android:id="@+id/reviewOrderDetails_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:textColor="#000000"
-            android:gravity="center_horizontal"
-            android:textSize="16sp"/>
+            android:textSize="24sp"/>
 
         <TextView
-            android:id="@+id/orderReview_text_view"
+            android:id="@+id/reviewName_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:textColor="#000000"
-            android:gravity="center_horizontal"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/reviewQuantity_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="#000000"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/reviewTotal_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="#000000"
             android:textSize="24sp"/>
     </LinearLayout>
 

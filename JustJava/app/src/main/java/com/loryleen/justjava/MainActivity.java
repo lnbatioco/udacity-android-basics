@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view){
         quantity++;
         display(quantity);
-        displayPrice(quantity * pricePerCoffee);
+        displayPrice(calculatePrice());
     }
 
     /**
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             quantity--;
             display(quantity);
-            displayPrice(quantity * pricePerCoffee);
+            displayPrice(calculatePrice());
         }
     }
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         if (quantity > 0){
             display(quantity);
-            displayPrice(quantity * pricePerCoffee);
+            displayThankYouMessageInsteadOfPrice();
             displayOrderReview();
         } else {
             Toast.makeText(this, "ERROR: Cannot make an order less than 0", Toast.LENGTH_SHORT).show();
@@ -75,30 +75,38 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given price on the screen.
      */
-    private void displayPrice(int number) {
+
+    private int calculatePrice(){
+        int price = quantity * pricePerCoffee;
+        return price;
+    }
+    private void displayPrice(int price) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+        priceTextView.setText(NumberFormat.getCurrencyInstance().format(price));
     }
 
+    private void displayThankYouMessageInsteadOfPrice(){
+        String thankYouMessage = "Thank you for ordering!";
+
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(thankYouMessage);
+    }
 
     /**
      * This method displays the order made.
      */
     private void displayOrderReview() {
-        String thankYouMessage = "Thank you for ordering.";
-        String singleCoffeeMessage = quantity + " java coffee on the way!";
-        String multipleCoffeeMessage = quantity + " java coffees on the way!";
+        String name = "Lory";
 
-        TextView thankYou = (TextView) findViewById(R.id.thankYouOrder_text_view);
-        TextView orderReview = (TextView) findViewById(R.id.orderReview_text_view);
+        TextView reviewOrderDetails = (TextView) findViewById(R.id.reviewOrderDetails_text_view);
+        TextView reviewName = (TextView) findViewById(R.id.reviewName_text_view);
+        TextView reviewQuantity = (TextView) findViewById(R.id.reviewQuantity_text_view);
+        TextView reviewTotal = (TextView) findViewById(R.id.reviewTotal_text_view);
 
-        if (quantity == 1){
-            thankYou.setText(thankYouMessage);
-            orderReview.setText(singleCoffeeMessage);
-        } else if (quantity > 1) {
-            thankYou.setText(thankYouMessage);
-            orderReview.setText(multipleCoffeeMessage);
-        }
+        reviewOrderDetails.setText("Here are your order details:");
+        reviewName.setText("Name: " + name);
+        reviewQuantity.setText("Quantity: " + quantity);
+        reviewTotal.setText("Price: $" + calculatePrice());
     }
 
 }
