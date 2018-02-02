@@ -70,4 +70,13 @@ public class MainActivity extends AppCompatActivity {
         displayScoreTeamB(scoreTeamB);
         Toast.makeText(this, "Team B scored 1 point!", Toast.LENGTH_SHORT).show();
     }
+
+    //TODO: Reset Scores
+    public void resetScores(View view){
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayScoreTeamA(scoreTeamA);
+        displayScoreTeamB(scoreTeamB);
+        Toast.makeText(this, "Game reset", Toast.LENGTH_SHORT).show();
+    }
 }
