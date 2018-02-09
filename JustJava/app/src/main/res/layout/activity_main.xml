@@ -31,7 +31,7 @@
             android:textAllCaps="true"/>
 
         <CheckBox
-            android:id="@+id/whipped_cream_check_box"
+            android:id="@+id/whipped_cream_checkbox"
             android:text="@string/whippedCream"
             android:textSize="16sp"
             android:paddingLeft="24dp"
@@ -41,7 +41,7 @@
             android:layout_marginLeft="16dp"/>
 
         <CheckBox
-            android:id="@+id/chocolate_check_box"
+            android:id="@+id/chocolate_checkbox"
             android:text="@string/chocolate"
             android:textSize="16sp"
             android:paddingLeft="24dp"
@@ -95,28 +95,7 @@
                 android:layout_marginLeft="16dp"
                 android:textSize="16sp"
                 android:onClick="increment"/>
-
         </LinearLayout>
-
-
-        <TextView
-            android:text="@string/price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
-            android:textSize="16sp"
-            android:textAllCaps="true"/>
-
-        <TextView
-            android:id="@+id/price_text_view"
-            android:text="@string/zeroStarterNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
-            android:textSize="16sp"
-            android:textColor="#000000"/>
 
         <Button
             android:id="@+id/order_button"
@@ -127,45 +106,6 @@
             android:layout_marginLeft="16dp"
             android:textSize="16sp"
             android:onClick="submitOrder"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="16dp"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/reviewOrderDetails_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:id="@+id/reviewName_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:id="@+id/reviewQuantity_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:id="@+id/reviewTotal_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textSize="24sp"/>
-        </LinearLayout>
-
-
 
     </LinearLayout>
 
