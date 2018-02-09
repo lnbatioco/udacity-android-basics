@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    
+
     /**
      * This method displays the given price on the screen.
      */
