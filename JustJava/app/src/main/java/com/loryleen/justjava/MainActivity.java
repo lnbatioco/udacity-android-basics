@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
+    
     /**
      * This method displays the given price on the screen.
      */
@@ -96,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
      * This method displays the order made.
      */
     private void displayOrderReview() {
-        String name = "Lory";
+        EditText nameField = (EditText) findViewById(R.id.nameField_text_view);
+        String name = nameField.getText().toString();
 
         TextView reviewOrderDetails = (TextView) findViewById(R.id.reviewOrderDetails_text_view);
         TextView reviewName = (TextView) findViewById(R.id.reviewName_text_view);
