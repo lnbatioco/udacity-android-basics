@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         // Calculate the price
         int price = calculatePrice(hasWhippedCream, hasChocolate);
 
+
         // Check if quantity is more than 0 before adding an order
         if (quantityMoreThanZero(quantity)){
             // Display the order summary on the screen
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         } else {
-            Toast.makeText(this, "Cannot order 0 items", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cannot place an order for 0 items", Toast.LENGTH_SHORT).show();
         }
     }
 
