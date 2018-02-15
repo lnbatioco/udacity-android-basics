@@ -32,6 +32,7 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("nine");
         words.add("ten");
 
+
         // TODO: Create an {@link ArrayAdapter}, whose data source is a list of Strings
         // The adapter knows how to create layouts for each item in the list, using the
         // simple_list_item_1.xml layout resource defined in the Android framework.
@@ -40,7 +41,7 @@ public class NumbersActivity extends AppCompatActivity {
         ArrayAdapter<String> itemsAdapter =
                 new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
 
-        // TODO: Find the {@link ListView} object in the view hierarchy of the {@link Activity}
+        // TODO: Find the {@link ListView} object in the view hierarchy of the {@link Activity} xml
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // activity_numbers.xml layout file.
         ListView listView = (ListView) findViewById(R.id.list);
