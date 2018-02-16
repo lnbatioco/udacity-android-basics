@@ -2,10 +2,10 @@ package com.example.android.miwok;
 
 /**
  * {@link Word} represents a vocabulary word
- * Contains default & Miwok translations for the word
- * Public class that can be accessed anywhere in the app
+ * Contains default & Miwok translations for each word
+ * Public class can be accessed anywhere in the app
  * Public methods can be called anywhere in our program
- * note: don't need setter methods since state of translations will not change
+ * note: don't need setter methods since the state of translations will not change
  *       instead, we set translation values in constructor
  */
 
